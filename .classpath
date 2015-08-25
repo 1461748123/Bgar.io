@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/Files/Bukkit/API/CustomEntitiesAPI1.8.jar"/>
+	<classpathentry kind="lib" path="F:/Files/Bukkit/API/spigot-api-1.8.8-R0.1-SNAPSHOT-latest-shaded.jar"/>
+	<classpathentry kind="lib" path="F:/Files/Bukkit/API/LibsDisguises.jar"/>
+	<classpathentry kind="lib" path="F:/Files/Bukkit/API/ProtocolLib.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

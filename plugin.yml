@@ -1,0 +1,8 @@
+main: me.Brian.Agario.Agario
+name: Agario
+version: 1.0
+depend: [LibsDisguises]
+commands:
+    debug:
+    test:
+    clean:
