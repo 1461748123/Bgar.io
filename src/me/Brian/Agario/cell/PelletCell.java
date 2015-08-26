@@ -9,9 +9,9 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class FoodCell extends Cell{
+public class PelletCell extends Cell{
 	
-	public FoodCell(Location location){
+	public PelletCell(Location location){
 		
 		super(1, location);
 		setType("foodcell");

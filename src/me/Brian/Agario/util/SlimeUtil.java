@@ -74,5 +74,7 @@ public class SlimeUtil {
 			return 0;
 		}
 	}
+	
+
 
 }

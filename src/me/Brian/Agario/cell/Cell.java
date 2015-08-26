@@ -6,9 +6,11 @@ import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 import org.json.JSONObject;
 
-public class Cell {
+public abstract class Cell {
 
 	private static Item indicator;
+	
+	public abstract void eat(Cell otherCell);
 
 	public Cell(int mass, Location location) {
 		location.setPitch(0f);

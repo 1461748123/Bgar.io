@@ -2,20 +2,17 @@ package me.Brian.Agario;
 
 import me.Brian.Agario.cell.AgarCell;
 import me.Brian.Agario.cell.Cell;
-import me.Brian.Agario.cell.FoodCell;
+import me.Brian.Agario.cell.PelletCell;
 import me.Brian.Agario.listeners.ItemMergeListener;
 import me.Brian.Agario.manager.AgarCellManager;
 import me.Brian.Agario.manager.CellManager;
 import me.Brian.Agario.util.MainScheduler;
-import me.dablakbandit.customentitiesapi.entities.CustomEntities;
-import me.dablakbandit.customentitiesapi.entities.CustomEntitySlime;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
@@ -131,7 +128,7 @@ public class Agario extends JavaPlugin implements Listener {
 				return true;
 			} else if (cmd.getName().equalsIgnoreCase("debug")) {
 				if (args[0].equalsIgnoreCase("spawn")) {
-					FoodCell fc = new FoodCell(player.getLocation());
+					PelletCell fc = new PelletCell(player.getLocation());
 					CellManager.addCell(fc);
 					indicator = fc.getIndicator();
 //					CellManager.addCell(new AgarCell(player, Integer.parseInt(args[1]), player.getLocation()));
@@ -173,7 +170,7 @@ public class Agario extends JavaPlugin implements Listener {
 				// AgarCell ac = new AgarCell(player, 3001, player.getLocation());
 				// CellManager.addCell(ac);
 
-				new FoodCell(player.getLocation());
+				new PelletCell(player.getLocation());
 
 				// DisguiseAPI.disguiseToAll(item, mobDisguise);
 				// this.am = item;
@@ -207,15 +204,7 @@ public class Agario extends JavaPlugin implements Listener {
 				// Item item = player.getWorld().dropItem(location, new ItemStack(Material.SLIME_BALL));
 				// item.setVelocity(player.getLocation().getDirection().multiply(1).setY(0.0D));
 			} else {
-				Location location = new Location(player.getWorld(), player.getLocation().getBlockX(), player.getLocation().getBlockY() - 2, player.getLocation().getBlockZ());
-				Item item = player.getWorld().dropItem(location, new ItemStack(Material.SLIME_BALL));
-				CustomEntitySlime ces = CustomEntities.getNewCustomEntitySlime(player.getLocation());
-				ces.removeGoalSelectorPathfinderGoalAll();
-				ces.setUnpushable();
-
-				((Slime) ces.getBukkitEntity()).setSize(Integer.parseInt(args[0]));
-				item.setPassenger(ces.getBukkitEntity());
-
+				
 				// player.teleport(ces.getBukkitEntity().getLocation());
 				// ces.getBukkitEntity().teleport(new Location(player.getWorld(), player.getLocation().getBlockX() + 0.5, player.getLocation().getY()-2, player.getLocation().getBlockZ() + 0.5));
 			}

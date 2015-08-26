@@ -97,4 +97,10 @@ public class AgarCell extends Cell {
 		this.supports = supports;
 	}
 
+	@Override
+	public void eat(Cell otherCell) {
+		// TODO 自动生成的方法存根
+		
+	}
+
 }
