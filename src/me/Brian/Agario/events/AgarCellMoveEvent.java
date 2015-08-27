@@ -5,10 +5,7 @@ import java.util.Map;
 
 import me.Brian.Agario.cell.AgarCell;
 import me.Brian.Agario.manager.AgarCellManager;
-import me.Brian.Agario.util.SlimeUtil;
 
-import org.bukkit.Effect;
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;

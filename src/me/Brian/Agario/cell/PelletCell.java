@@ -9,7 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class PelletCell extends Cell{
+public class PelletCell extends PointCell{
 	
 	public PelletCell(Location location){
 		
@@ -32,5 +32,6 @@ public class PelletCell extends Cell{
 		location.setZ(location.getZ() +0.5);
 		return location;
 	}
+
 
 }

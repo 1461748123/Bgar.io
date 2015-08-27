@@ -1,12 +1,7 @@
 package me.Brian.Agario.util;
 
 import me.Brian.Agario.Agario;
-import me.Brian.Agario.cell.PelletCell;
-import me.Brian.Agario.events.AgarCellMoveEvent;
-import me.Brian.Agario.manager.CellManager;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Effect;
 import org.bukkit.scheduler.BukkitScheduler;
 
 public class MainScheduler {
@@ -15,8 +10,8 @@ public class MainScheduler {
 		scheduler.scheduleSyncRepeatingTask(Agario.getInstance(), new Runnable() {
 			@Override
 			public void run() {
-				Bukkit.getWorld("world").playEffect(((PelletCell)CellManager.getCell(Agario.indicator)).getLocation(), Effect.COLOURED_DUST, 5);
-				Bukkit.getServer().getPluginManager().callEvent(new AgarCellMoveEvent());
+//				Bukkit.getWorld("world").playEffect(((PelletCell)CellManager.getCell(Agario.indicator)).getLocation(), Effect.COLOURED_DUST, 5);
+//				Bukkit.getServer().getPluginManager().callEvent(new AgarCellMoveEvent());
 			}
 		}, 0L, 1L);
 	}

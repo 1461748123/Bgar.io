@@ -45,11 +45,11 @@ public class CollisonUtil {
 
 	// south
 
-	public static boolean test(Cell pointcell, Cell reccell) {
-		Point point = new Point(pointcell);
-		Rectangle rec = new Rectangle(reccell);
-
-		return (point.getX() > rec.getDown().getX() && point.getX() < rec.getUp().getX() && point.getZ() > rec.getDown().getZ() && point.getZ() < rec.getUp().getZ());
-	}
+//	public static boolean test(Cell pointcell, Cell reccell) {
+//		Point point = new Point(pointcell);
+//		Rectangle rec = new Rectangle(reccell);
+//
+//		return (point.getX() > rec.getDown().getX() && point.getX() < rec.getUp().getX() && point.getZ() > rec.getDown().getZ() && point.getZ() < rec.getUp().getZ());
+//	}
 
 }

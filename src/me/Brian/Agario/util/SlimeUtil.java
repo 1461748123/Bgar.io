@@ -4,7 +4,6 @@ import me.Brian.Agario.cell.Cell;
 
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.entity.Slime;
 
 public class SlimeUtil {
 	// south

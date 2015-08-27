@@ -19,7 +19,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.json.JSONObject;
 
-public class AgarCell extends Cell {
+public class AgarCell extends SquareCell {
 
 	private ArmorStand base;
 	private List<ArmorStand> supports = new ArrayList<ArmorStand>();
@@ -71,6 +71,7 @@ public class AgarCell extends Cell {
 		JSONObject jsonobj = new JSONObject(cell.getIndicator().getCustomName());
 		new AgarCell(Bukkit.getPlayerExact(jsonobj.getString("player")), jsonobj.getInt("mass"), location);
 	}
+	
 
 	public Player getPlayer() {
 		JSONObject jsonobj = new JSONObject(getIndicator().getCustomName());
@@ -96,11 +97,8 @@ public class AgarCell extends Cell {
 	public void setSupports(List<ArmorStand> supports) {
 		this.supports = supports;
 	}
+	
 
-	@Override
-	public void eat(Cell otherCell) {
-		// TODO 自动生成的方法存根
-		
-	}
+
 
 }

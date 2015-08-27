@@ -1,6 +1,5 @@
 package me.Brian.Agario.util;
 
-import me.Brian.Agario.cell.Cell;
 
 public class Rectangle {
 	private Point up;
@@ -9,11 +8,6 @@ public class Rectangle {
 	public Rectangle(Point up, Point down) {
 		setUp(up);
 		setDown(down);
-	}
-
-	public Rectangle(Cell cell) {
-		setUp(SlimeUtil.getUpCorner(cell));
-		setDown(SlimeUtil.getDownCorner(cell));
 	}
 
 	public Point getUp() {
