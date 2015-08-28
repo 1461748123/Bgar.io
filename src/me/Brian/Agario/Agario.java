@@ -128,10 +128,10 @@ public class Agario extends JavaPlugin implements Listener {
 				return true;
 			} else if (cmd.getName().equalsIgnoreCase("debug")) {
 				if (args[0].equalsIgnoreCase("spawn")) {
-					PelletCell fc = new PelletCell(player.getLocation());
-					CellManager.addCell(fc);
-					indicator = fc.getIndicator();
-//					CellManager.addCell(new AgarCell(player, Integer.parseInt(args[1]), player.getLocation()));
+					Cell cell = new AgarCell(player, Integer.parseInt(args[1]), player.getLocation());
+					CellManager.addCell(cell);
+					System.out.println(cell.getIndicator().getCustomName());
+					this.indicator  = cell.getIndicator();
 				} else if (args[0].equalsIgnoreCase("add")) {
 					if (args.length == 1) {
 						location = player.getLocation();
@@ -170,7 +170,7 @@ public class Agario extends JavaPlugin implements Listener {
 				// AgarCell ac = new AgarCell(player, 3001, player.getLocation());
 				// CellManager.addCell(ac);
 
-				new PelletCell(player.getLocation());
+				
 
 				// DisguiseAPI.disguiseToAll(item, mobDisguise);
 				// this.am = item;
@@ -194,6 +194,7 @@ public class Agario extends JavaPlugin implements Listener {
 			} else if (args.length == 1) {
 				AgarCell ac = new AgarCell(player, Integer.parseInt(args[0]), player.getLocation());
 				AgarCellManager.addCell(ac);
+				System.out.println(ac.getIndicator().toString());
 				CellManager.addCell(ac);
 				player.sendMessage((ac instanceof Cell) + "");
 				player.sendMessage(ac.getIndicator().getCustomName());

@@ -8,11 +8,12 @@ import org.json.JSONObject;
 
 public abstract class Cell {
 
-	private static Item indicator;
-	
+	private Item indicator;
+
 	public abstract boolean isCollision(Cell otherCell);
-//	
-//	public abstract void eat(Cell otherCell);
+
+	//
+	// public abstract void eat(Cell otherCell);
 
 	public Cell(int mass, Location location) {
 		location.setPitch(0f);
@@ -30,7 +31,7 @@ public abstract class Cell {
 	}
 
 	public void setIndicator(Item indicator) {
-		Cell.indicator = indicator;
+		this.indicator = indicator;
 	}
 
 	public String getType() {
@@ -48,10 +49,11 @@ public abstract class Cell {
 	public void setMass(int mass) {
 		getIndicator().setCustomName(new JSONObject(getIndicator().getCustomName()).put("mass", mass).toString());
 	}
-	
-	public Location getLocation(){
+
+	public Location getLocation() {
 		return getIndicator().getLocation();
 	}
+
 	public static Cell getMax(Cell cell1, Cell cell2) {
 		return (cell1.getMass() >= cell2.getMass()) ? cell1 : cell2;
 	}

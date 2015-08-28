@@ -11,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ItemMergeEvent;
 
 public class ItemMergeListener implements Listener {
-	//
+
 	@EventHandler
 	public void onItemMerge(ItemMergeEvent event) {
 		Item from = event.getEntity();
@@ -35,7 +35,8 @@ public class ItemMergeListener implements Listener {
 			if (maxcell instanceof SquareCell) {
 				SquareCell squarecell = (SquareCell) maxcell;
 				if (squarecell.canConsume(mincell)) {
-					// do sth
+					System.out.print("Can consume");
+
 				}
 			}
 		}

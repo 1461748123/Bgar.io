@@ -67,6 +67,10 @@ public class SquareCell extends Cell {
 
 			return (X > minX && X < maxX && Z > minZ && Z < maxZ);
 		} else if (otherCell instanceof SquareCell) {
+			System.out.println(isCollison(this, (SquareCell) otherCell) || isCollison((SquareCell) otherCell, this));
+			System.out.println(isCollison(this, (SquareCell) otherCell));
+			System.out.println(isCollison((SquareCell)otherCell, this));
+
 			return isCollison(this, (SquareCell) otherCell) || isCollison((SquareCell) otherCell, this);
 		}
 		return false;
@@ -79,11 +83,11 @@ public class SquareCell extends Cell {
 		double minX1 = cell1.getHitbox().getDown().getX();
 		double minZ1 = cell1.getHitbox().getDown().getZ();
 
-		double maxX2 = cell2.getHitbox().getUp().getX();
-		double maxZ2 = cell2.getHitbox().getUp().getZ();
+		double maxX2 = cell2.getCollisionbox().getUp().getX();
+		double maxZ2 = cell2.getCollisionbox().getUp().getZ();
 
-		double minX2 = cell2.getHitbox().getDown().getX();
-		double minZ2 = cell2.getHitbox().getDown().getZ();
+		double minX2 = cell2.getCollisionbox().getDown().getX();
+		double minZ2 = cell2.getCollisionbox().getDown().getZ();
 
 		return ((maxX2 < maxX1 && maxX2 > minX1 && maxZ2 < maxZ1 && maxZ2 > minZ1)
 				&& (minX2 < maxX1 && minX2 > minX1 && minZ2 < maxZ1 && minZ2 > minZ1));
